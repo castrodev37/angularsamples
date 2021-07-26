@@ -1,0 +1,20 @@
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <div class="card-body" style="text-align: center;">
+        <h1 class="card-title">{{ article.votes }}</h1>
+        <p class="card-text">POINTS</p>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+        <h5 class="card-title"><a href="{{ article.link }}">{{ article.title }}</a></h5>
+        <p>({{article.domain()}})</p>
+        <div>  
+          <span class="card-text" style="margin-right: 10px;"><a href (click)="voteUp()"><small class="text-muted">upvote</small></a></span>
+          <span class="card-text"><a href (click)="voteDown()"><small class="text-muted">downvote</small></a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
